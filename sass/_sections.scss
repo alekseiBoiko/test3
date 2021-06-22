@@ -1,0 +1,325 @@
+.welcome {
+    height: 100vh;
+    padding: 10% $padding-hor $padding-ver;
+    background-color: black;
+    @include flex(unset,column,center, center);
+
+    .welcome-text {
+        padding-bottom: 20%;
+        text-align: center;
+    }
+
+    .welcome-tittle {
+        b {
+            color: $orange;
+        }
+    }
+
+    p {
+        margin-top: 1em;
+    }
+}
+
+.about {
+    min-height: 100vh;
+    @include flex(unset, unset, space-between, center);
+    @include block-style(white);
+
+    .about-block {
+        width: 45%;
+        margin: 0 auto;
+        text-align: left;
+
+        .about-image {
+            transform: scale(0);
+            @include transition(transform);
+        }
+
+        .about-image._active {
+            transform: scale(1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .colour-line {
+            margin: 0;
+        }
+
+        .about-title {
+            margin: 1rem 0;
+            color: black;
+        }
+
+        p {
+            padding: 1rem 0;
+        }
+
+        .about-list {
+            margin: 0 0 2em 0;
+            line-height: 2em;
+            text-align: left;
+            // display: flex;
+            // flex-direction: column;
+            // flex-wrap: wrap;
+            // overflow: hidden;
+            // list-style: none;
+
+            dd {
+                width: 100%;
+                padding-left: 0;
+                margin-left: 0;
+                // white-space: pre-line;
+                // float: left;
+                // display: inline-block;
+                // float: right;
+            }
+
+            .about-list-item {
+                display: list-item;
+                float: left;
+                padding: 0;
+                margin: 0;
+                font-size: 1.2em;
+                color: black;
+                list-style-position: inside;
+                list-style-image: url(/images/marker.svg);
+
+                &::after {
+                    font-weight: bold;
+                    white-space: pre;
+                    content: " - ";
+                }
+            }
+        }
+    }
+}
+
+.team {
+    @include block-style(black);
+
+    color: white;
+
+    .team-img {
+        max-width: 50%;
+        max-height: 50%;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    .team-item-title {
+        padding: 1em 0;
+
+        .team-item-name {
+            font-size: 1.25em;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .team-item-description {
+        font-size: 0.88rem;
+    }
+}
+
+.services {
+    @include block-style(white);
+
+    .services-list {
+        @include flex(wrap, unset, center, unset);
+
+        width: 100%;
+        padding: $padding-ver;
+        margin: -10px;
+        overflow: hidden;
+
+        .services-items {
+            opacity: 0;
+            transform: translate(0, 120%);
+        }
+
+        &._active .services-items {
+            opacity: 1;
+            transform: translate(0, 0);
+
+            @for $serviceNumber from 1 through 4 {
+                $delayTime: $serviceNumber*0.2;
+
+                &:nth-child(#{$serviceNumber}) {
+                    transition: transform 0.8s ease #{$delayTime + s};
+                }
+            }
+        }
+
+        .services-items-link {
+            padding: 0.5rem;
+            border-radius: 10px;
+            @include flex(unset, column, unset, center);
+            @include transition(box-shadow);
+
+            .services-icon {
+                width: 125px;
+                height: 125px;
+                padding: 30px;
+                border: solid 5px $orange;
+                border-radius: 50%;
+                @include transition(background-color border-color);
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 4px $gray;
+
+                .services-icon {
+                    background-color: $orange;
+                    border-color: $gray;
+                }
+            }
+
+            .services-items-description {
+                width: 100%;
+                font-size: inherit;
+                font-size: 0.88rem;
+                color: black;
+            }
+        }
+    }
+}
+
+.clients {
+    @include block-style(black);
+
+    .clients-logo {
+        width: 100%;
+        background-color: white;
+    }
+}
+
+.works {
+    @include block-style(white);
+
+    .works-container {
+        padding-top: $padding-ver;
+
+        .works-filter {
+            @include flex(none,none,space-between, center);
+
+            width: 100%;
+            margin-bottom: 1rem;
+
+            .filter-type {
+                color: black;
+            }
+
+            .filter-list {
+                @include flex(unset,unset,flex-end, center);
+
+                margin: -0.5rem 0;
+
+                .filter-item {
+                    @include transition(all);
+
+                    padding: 0 1rem;
+                    margin: 0.5rem 0;
+                    background: none;
+                    border: none;
+                    border-right: 2px solid $gray;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    &:hover {
+                        padding: 0.5rem 1rem;
+                        font-weight: bold;
+                        color: white;
+                        background-color: $orange;
+                        border: none;
+                        border-radius: 5px;
+                        box-shadow: 0 0 0 4px $gray;
+                    }
+                }
+            }
+
+            .filter-list_active {
+                right: 0;
+            }
+
+            .filter-active {
+                font-weight: bold;
+                color: black;
+            }
+        }
+
+        .works-list {
+            margin: -1rem;
+
+            .works-item {
+
+                .works-item-holder {
+                    position: relative;
+                    margin: 1rem;
+
+                    .works-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .works-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0.5rem;
+                        background-color: #212121;
+                        opacity: 0;
+
+                        &:hover {
+                            opacity: 0.8;
+                            @include transition(opacity);
+                        }
+
+                        h3 {
+                            color: white;
+                        }
+                    }
+                }            
+            }
+        }
+    }
+}
+
+.testimonials {
+    @include block-style(black);
+
+    .testimonials-text {
+        margin-bottom: 2rem;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .testimonials-author a{
+        @include transition(all);
+
+        &:hover {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.contact {
+    @include block-style(white);
+
+    .contact-forms {
+        padding: 0 $padding-hor;
+    }
+}

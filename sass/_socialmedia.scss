@@ -1,0 +1,24 @@
+.social-icons-list {
+    @include flex(unset, null, space-between, center);
+
+    .social-icons {
+        @include transition(all);
+
+        width: 3rem;
+        margin-left: 0.5rem;
+        line-height: 3rem;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px solid $gray;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: $orange;
+            border: none;
+
+            i {
+                color: white;
+            }
+        }
+    }
+}
