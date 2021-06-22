@@ -542,12 +542,6 @@ button {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: unset;
-      flex-wrap: unset;
-      -webkit-box-orient: unset;
-      -webkit-box-direction: unset;
-      -ms-flex-direction: unset;
-      flex-direction: unset;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
       justify-content: flex-end;
@@ -561,7 +555,6 @@ button {
         padding: 0 1rem;
         margin: 0.5rem 0;
         background: none;
-        border: none;
         border-right: 2px solid #999; }
         .works .works-container .works-filter .filter-list .filter-item:last-child {
           border-right: none; }
@@ -740,7 +733,12 @@ button {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .works-filter .filter-type, .works-filter .filter-list {
-      width: 100%; } }
+      width: 100%; }
+    .works-filter .filter-list {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .works-filter .filter-list .filter-item {
+        width: 50%; } }
 
 @media only screen and (max-width: 576px) {
   body {

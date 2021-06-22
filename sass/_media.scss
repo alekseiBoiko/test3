@@ -66,6 +66,23 @@
         .filter-type, .filter-list {
             width: 100%;
         }
+
+        .filter-list {
+            flex-wrap: wrap;
+
+            .filter-item {
+                width: 50%;
+                // border: none;
+                // border-right: 2px solid $gray;
+                // border-left: 2px solid $gray;
+                // border-right: none;
+
+                &:nth-child(2) {
+                    // border-right: none;
+                    // border: none;
+                }
+            }
+        }
     }
 }
 

@@ -214,7 +214,7 @@
             }
 
             .filter-list {
-                @include flex(unset,unset,flex-end, center);
+                @include flex(null,null,flex-end, center);
 
                 margin: -0.5rem 0;
 
@@ -224,7 +224,6 @@
                     padding: 0 1rem;
                     margin: 0.5rem 0;
                     background: none;
-                    border: none;
                     border-right: 2px solid $gray;
 
                     &:last-child {
