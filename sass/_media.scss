@@ -63,7 +63,7 @@
     .works-filter {
         flex-wrap: wrap;
 
-        .filter-type, .filter-list {
+        .filter-type {
             width: 100%;
         }
 
@@ -73,12 +73,9 @@
             .filter-item {
                 width: 50%;
                 // border: none;
-                // border-right: 2px solid $gray;
-                // border-left: 2px solid $gray;
-                // border-right: none;
 
                 &:nth-child(2) {
-                    // border-right: none;
+                    border-right: none;
                     // border: none;
                 }
             }
@@ -101,15 +98,36 @@
 
     .works-item {
         width: 48%;
+
+        h3 {
+            font-size: 0.75rem;
+        }
+
+        .works-overlay-button {
+            padding: 0.5rem;
+            margin: 0.5rem;
+        }
     }
 
     .form-input {
         flex-basis: 100%;
     }
 
-    .social-icons-list .social-icons {
-        width: 1.5rem;
-        margin-left: 0.3rem;
-        line-height: 1.5rem;
+    #footer {
+        p {
+            max-width: 50%;
+            font-size: 0.75rem;
+        }
+
+        .social-icons-list {
+            flex-wrap: wrap;
+            width: 5rem;
+
+            .social-icons {
+                width: 2rem;
+                margin: 0 0 0.3rem 0.3rem;
+                line-height: 1.5rem;
+            }
+        }
     }
 }

@@ -1,8 +1,7 @@
 #footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 90px;
+    @include flex(unset, null, space-between, center);
+
+    min-height: 90px;
     padding: 0 $padding-hor;
     background-color: #212121;
 

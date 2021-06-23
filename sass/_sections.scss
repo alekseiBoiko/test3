@@ -1,8 +1,9 @@
 .welcome {
+    @include flex(unset,column,center, center);
+
     height: 100vh;
     padding: 10% $padding-hor $padding-ver;
     background-color: black;
-    @include flex(unset,column,center, center);
 
     .welcome-text {
         padding-bottom: 20%;
@@ -21,9 +22,10 @@
 }
 
 .about {
-    min-height: 100vh;
     @include flex(unset, unset, space-between, center);
     @include block-style(white);
+
+    min-height: 100vh;
 
     .about-block {
         width: 45%;
@@ -31,8 +33,9 @@
         text-align: left;
 
         .about-image {
-            transform: scale(0);
             @include transition(transform);
+
+            transform: scale(0);
         }
 
         .about-image._active {
@@ -60,20 +63,11 @@
             margin: 0 0 2em 0;
             line-height: 2em;
             text-align: left;
-            // display: flex;
-            // flex-direction: column;
-            // flex-wrap: wrap;
-            // overflow: hidden;
-            // list-style: none;
 
             dd {
                 width: 100%;
                 padding-left: 0;
                 margin-left: 0;
-                // white-space: pre-line;
-                // float: left;
-                // display: inline-block;
-                // float: right;
             }
 
             .about-list-item {
@@ -155,18 +149,20 @@
         }
 
         .services-items-link {
-            padding: 0.5rem;
-            border-radius: 10px;
             @include flex(unset, column, unset, center);
             @include transition(box-shadow);
 
+            padding: 0.5rem;
+            border-radius: 10px;
+
             .services-icon {
+                @include transition(background-color border-color);
+
                 width: 125px;
                 height: 125px;
                 padding: 30px;
                 border: solid 5px $orange;
                 border-radius: 50%;
-                @include transition(background-color border-color);
             }
 
             &:hover {
@@ -255,41 +251,41 @@
         .works-list {
             margin: -1rem;
 
-            .works-item {
+            .works-item-holder {
+                position: relative;
+                margin: 0.5rem;
 
-                .works-item-holder {
-                    position: relative;
-                    margin: 1rem;
+                .works-img {
+                    width: 100%;
+                    height: 100%;
+                }
 
-                    .works-img {
-                        width: 100%;
-                        height: 100%;
+                .works-overlay {
+                    @include flex(null,column,center, center);
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.5rem;
+                    background-color: #212121;
+                    opacity: 0;
+
+                    &:hover {
+                        @include transition(opacity);
+
+                        opacity: 0.8;
                     }
 
-                    .works-overlay {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        height: 100%;
-                        padding: 0.5rem;
-                        background-color: #212121;
-                        opacity: 0;
-
-                        &:hover {
-                            opacity: 0.8;
-                            @include transition(opacity);
-                        }
-
-                        h3 {
-                            color: white;
-                        }
+                    h3 {
+                        color: white;
                     }
-                }            
+
+                    p {
+                        line-height: 1rem;
+                    }
+                }
             }
         }
     }

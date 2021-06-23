@@ -156,9 +156,9 @@ function sortIsotope() {
   $('.works-list').isotope({
       percentPosition: true,
       itemSelector: '.works-item',
-      masonry: {
-        columnWidth: '.grid-sizer'
-      }
+      // masonry: {
+      //   columnWidth: '.grid-sizer'
+      // }
   })
 
   $('.filter-list').on( 'click', 'button', function() {
@@ -218,4 +218,3 @@ function animBlock () {
 function wow() {
   new WOW().init();
 };
-

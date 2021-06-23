@@ -1,6 +1,8 @@
 .social-icons-list {
     @include flex(unset, null, space-between, center);
 
+    margin-left: 1rem;
+
     .social-icons {
         @include transition(all);
 
