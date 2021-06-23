@@ -1,13 +1,7 @@
 @font-face {
     font-family: 'Gotham';
+    src: url(../fonts/Gotham-Font/GothamBook.ttf);
     font-style: normal;
-    font-weight: 300;
-    src: url(../fonts/Gotham-Font/gothambook.eot); /* IE9 Compat Modes */
-    src:url(../fonts/Gotham-Font/gothambook.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
-        url(../fonts/Gotham-Font/gothambook.ttf) format('truetype'), /* Safari, Android, iOS */
-        url(../fonts/Gotham-Font/gothambook.woff2) format('woff2'), /* Super Modern Browsers */
-        url(../fonts/Gotham-Font/gothambook.woff) format('woff'), /* Pretty Modern Browsers */
-        url(../fonts/Gotham-Font/gothambook.svg#svgFontName) format('svg'); /* Legacy iOS */
 }
 
 @font-face {
@@ -24,7 +18,7 @@
 
 body {
     width: 100%;
-    font-family: 'Gotham', 'arial', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-size: 16px;
     color: $gray;
 }
