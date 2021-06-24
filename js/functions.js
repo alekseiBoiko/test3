@@ -39,7 +39,14 @@ function scrollButtons() {
       welcomeHolder = $('.about').offset().top,
       workHolder = $('.works').offset().top;
 
-  $(".nav").on("click","a", function (event) {
+//   $(".nav").on("click","a", function (event) {
+//     event.preventDefault();
+//     let navId = $(this).attr('href'),
+//         blockTop = $(navId).offset().top;            
+//     window.animate({scrollTop: blockTop - headerHeight}, 600);
+//   });
+  
+  $('a[href*="."]').on('click',function (event) {
     event.preventDefault();
     let navId = $(this).attr('href'),
         blockTop = $(navId).offset().top;            
