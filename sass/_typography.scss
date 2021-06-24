@@ -10,18 +10,6 @@
         url(../fonts/Gotham-Font/gothambook.svg#svgFontName) format('svg'); /* Legacy iOS */
 }
 
-@font-face {
-    font-family: 'GothamBold';
-    src: url(../fonts/Gotham-Font/GothamBold.ttf);
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'GothamItalic';
-    src: url(../fonts/Gotham-Font/GothamBookItalic.ttf);
-    font-style: italic;
-}
-
 body {
     width: 100%;
     font-family: 'Gotham', 'arial', sans-serif;
@@ -46,14 +34,6 @@ h3 {
     margin: 1rem 0;
     font-size: 1rem;
     text-transform: uppercase;
-}
-
-b {
-    font-family: 'GothamBold';
-}
-
-i {
-    font-family: 'GothamItalic';
 }
 
 p {
