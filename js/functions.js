@@ -1,6 +1,7 @@
 $(function(){
   changeHamburger();
   fixHeader();
+  scrollNav();
   scrollButtons();
   drawSlider();
   turnonFancybox();
@@ -32,6 +33,29 @@ function fixHeader() {
   })
 };
 
+function scrollNav() {
+  document.querySelectorAll('a[href^="#"').forEach(link => {
+
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let href = this.getAttribute('href').substring(1);
+
+        const scrollTarget = document.getElementById(href);
+
+        const topOffset = document.querySelector('.header').offsetHeight;
+        // const topOffset = 0; // если не нужен отступ сверху 
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+};
+
 function scrollButtons() {
   'use strict;';
   let window = $('body,html'),
@@ -46,12 +70,12 @@ function scrollButtons() {
 //     window.animate({scrollTop: blockTop - headerHeight}, 600);
 //   });
   
-  $('a[href*="#"]').on('click',function (event) {
-    event.preventDefault();
-    let navId = $(this).attr('href'),
-        blockTop = $(navId).offset().top;            
-    window.animate({scrollTop: blockTop - headerHeight}, 600);
-  });
+//   $('a[href*="#"]').on('click',function (event) {
+//     event.preventDefault();
+//     let navId = $(this).attr('href'),
+//         blockTop = $(navId).offset().top;            
+//     window.animate({scrollTop: blockTop - headerHeight}, 600);
+//   });
   
   $('.welcome-button').on('click', function (event) {
     event.preventDefault();
