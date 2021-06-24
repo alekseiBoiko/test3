@@ -10,6 +10,21 @@
         url(../fonts/Gotham-Font/gothambook.svg#svgFontName) format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+    font-family: 'GothamItalic';
+    font-style: italic;
+    src: url(../fonts/Gotham-Font/gothambookitalic.eot); /* IE9 Compat Modes */
+    src:url(../fonts/Gotham-Font/gothambookitalic.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+        url(../fonts/Gotham-Font/gothambookitalic.ttf) format('truetype'), /* Safari, Android, iOS */
+        url(../fonts/Gotham-Font/gothambookitalic.woff2) format('woff2'), /* Super Modern Browsers */
+        url(../fonts/Gotham-Font/gothambookitalic.woff) format('woff'), /* Pretty Modern Browsers */
+        url(../fonts/Gotham-Font/gothambookitalic.svg#svgFontName) format('svg'); /* Legacy iOS */
+}
+
+i {
+    font-family: 'GothamItalic', 'arial', sans-serif;
+}
+
 body {
     width: 100%;
     font-family: 'Gotham', 'arial', sans-serif;
