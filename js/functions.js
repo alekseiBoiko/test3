@@ -70,7 +70,7 @@ function scrollButtons() {
 //     $('html, body').animate({scrollTop: blockTop - headerHeight}, 600);
 //   });
   
-  $('a[href*="#"]').on('click',function (event) {
+  $('a[href*="."]').on('click',function (event) {
     event.preventDefault();
     let navId = $(this).attr('href'),
         blockTop = $(navId).offset().top;            
