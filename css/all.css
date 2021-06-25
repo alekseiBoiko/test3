@@ -647,6 +647,10 @@ button {
   display: flex;
   -ms-flex-wrap: unset;
   flex-wrap: unset;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -654,7 +658,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   min-height: 90px;
-  padding: 0 12%;
+  padding: 1rem 12%;
   background-color: #212121; }
   #footer a {
     -webkit-transition: all 0.5s ease 0s;
