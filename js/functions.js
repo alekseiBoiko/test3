@@ -1,7 +1,7 @@
 $(function(){
   changeHamburger();
   fixHeader();
-  scrollNav();
+//   scrollNav();
   scrollButtons();
   drawSlider();
   turnonFancybox();
@@ -33,28 +33,28 @@ function fixHeader() {
   })
 };
 
-function scrollNav() {
-  document.querySelectorAll('a[href^="#"').forEach(link => {
+// function scrollNav() {
+//   document.querySelectorAll('a[href^="#"').forEach(link => {
 
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+//     link.addEventListener('click', function(e) {
+//         e.preventDefault();
 
-        let href = this.getAttribute('href').substring(1);
+//         let href = this.getAttribute('href').substring(1);
 
-        const scrollTarget = document.getElementById(href);
+//         const scrollTarget = document.getElementById(href);
 
-        const topOffset = document.querySelector('.header').offsetHeight;
-        // const topOffset = 0; // если не нужен отступ сверху 
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
+//         const topOffset = document.querySelector('.header').offsetHeight;
+//         // const topOffset = 0; // если не нужен отступ сверху 
+//         const elementPosition = scrollTarget.getBoundingClientRect().top;
+//         const offsetPosition = elementPosition - topOffset;
 
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-    });
-});
-};
+//         window.scrollBy({
+//             top: offsetPosition,
+//             behavior: 'smooth'
+//         });
+//     });
+// });
+// };
 
 function scrollButtons() {
   'use strict;';
@@ -63,12 +63,12 @@ function scrollButtons() {
       welcomeHolder = $('.about').offset().top,
       workHolder = $('.works').offset().top;
 
-//   $(".nav").on("click","a", function (event) {
-//     event.preventDefault();
-//     let navId = $(this).attr('href'),
-//         blockTop = $(navId).offset().top;            
-//     window.animate({scrollTop: blockTop - headerHeight}, 600);
-//   });
+  $(".nav").on("click","a", function (event) {
+    event.preventDefault();
+    let navId = $(this).attr('href'),
+        blockTop = $(navId).offset().top;            
+    $('html, body').animate({scrollTop: blockTop - headerHeight}, 600);
+  });
   
 //   $('a[href*="#"]').on('click',function (event) {
 //     event.preventDefault();
