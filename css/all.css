@@ -333,8 +333,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: unset;
-  flex-wrap: unset;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -349,6 +349,7 @@ button {
   padding: 10% 12% 4%;
   background-color: black; }
   .welcome .welcome-text {
+    width: 100%;
     padding-bottom: 20%;
     text-align: center; }
   .welcome .welcome-tittle b {
@@ -587,11 +588,7 @@ button {
       font-weight: bold;
       color: black; }
   .works .works-list {
-    margin: -1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0.5rem; }
+    margin: -1rem; }
     .works .works-list .works-item-holder {
       position: relative;
       margin: 0.5rem; }

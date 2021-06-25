@@ -186,31 +186,6 @@ function sortIsotope() {
     layoutMode: 'fitRows'
   });
   
-// // init
-// $container.imagesLoaded( function(){
-// $container.isotope({
-//  // options
-// itemSelector: '.box',
-// layoutMode: 'masonry'
-// });
-// });
-
-  // $('.works-list').load(function(){  
-  
-    
-  // });
-
-  // $(window).load(function(){ 
-    // $('.works-list').imagesLoaded( function(){
-    // $('.works-list').isotope({
-    //     percentPosition: true,
-    //     itemSelector: '.works-item',
-    //     // masonry: {
-    //     //   columnWidth: '.grid-sizer'
-    //     // }
-    // })
-  // });
-
   $list.imagesLoaded().progress(function(){
     $list.isotope('layout');
   });
