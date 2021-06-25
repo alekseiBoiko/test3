@@ -196,98 +196,99 @@
 .works {
     @include block-style(white);
 
-    .works-container {
-        padding-top: $padding-ver;
+    p {
+        padding-bottom: $padding-ver;
+    }
 
-        .works-filter {
-            @include flex(none,none,space-between, center);
+    .works-filter {
+        @include flex(none,none,space-between, center);
 
-            width: 100%;
-            margin-bottom: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
 
-            .filter-type {
-                color: black;
-            }
+        .filter-type {
+            color: black;
+        }
 
-            .filter-list {
-                @include flex(null,null,flex-end, center);
+        .filter-list {
+            @include flex(null,null,flex-end, center);
 
-                margin: -0.5rem 0;
+            margin: -0.5rem 0;
 
-                .filter-item {
-                    @include transition(all);
+            .filter-item {
+                @include transition(all);
 
-                    padding: 0 1rem;
-                    margin: 0.5rem 0;
-                    background: none;
-                    border-right: 2px solid $gray;
+                padding: 0 1rem;
+                margin: 0.5rem 0;
+                background: none;
+                border-right: 2px solid $gray;
 
-                    &:last-child {
-                        border-right: none;
-                    }
-
-                    &:hover {
-                        padding: 0.5rem 1rem;
-                        font-weight: bold;
-                        color: white;
-                        background-color: $orange;
-                        border: none;
-                        border-radius: 5px;
-                        box-shadow: 0 0 0 4px $gray;
-                    }
+                &:last-child {
+                    border-right: none;
                 }
-            }
 
-            .filter-list_active {
-                right: 0;
-            }
-
-            .filter-active {
-                font-weight: bold;
-                color: black;
+                &:hover {
+                    padding: 0.5rem 1rem;
+                    font-weight: bold;
+                    color: white;
+                    background-color: $orange;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0 0 0 4px $gray;
+                }
             }
         }
 
-        .works-list {
-            margin: -1rem;
+        .filter-list_active {
+            right: 0;
+        }
 
-            .works-item-holder {
-                position: relative;
-                margin: 0.5rem;
+        .filter-active {
+            font-weight: bold;
+            color: black;
+        }
+    }
 
-                .works-img {
-                    width: 100%;
-                    height: 100%;
+    .works-list {
+        margin: -1rem;
+
+        .works-item-holder {
+            position: relative;
+            margin: 0.5rem;
+
+            .works-img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .works-overlay {
+                @include flex(null,column,center, center);
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0.5rem;
+                background-color: #212121;
+                opacity: 0;
+
+                &:hover {
+                    @include transition(opacity);
+
+                    opacity: 0.8;
                 }
 
-                .works-overlay {
-                    @include flex(null,column,center, center);
+                h3 {
+                    color: white;
+                }
 
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0.5rem;
-                    background-color: #212121;
-                    opacity: 0;
-
-                    &:hover {
-                        @include transition(opacity);
-
-                        opacity: 0.8;
-                    }
-
-                    h3 {
-                        color: white;
-                    }
-
-                    p {
-                        line-height: 1rem;
-                    }
+                p {
+                    line-height: 1rem;
                 }
             }
         }
+    
     }
 }
 
