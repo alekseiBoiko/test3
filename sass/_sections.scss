@@ -196,6 +196,8 @@
 .works {
     @include block-style(white);
 
+    min-height: 100vh;
+
     p {
         padding-bottom: $padding-ver;
     }
@@ -251,6 +253,8 @@
 
     .works-list {
         margin: -1rem;
+        display: flex;
+        margin: 0.5rem;
 
         .works-item-holder {
             position: relative;
