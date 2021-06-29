@@ -97,9 +97,11 @@
 }
 
 .works-overlay-button {
-    padding: 1rem;
-    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
     color: $orange;
+    vertical-align: middle;
     background-color: inherit;
     border: 2px solid $orange;
     border-radius: 50%;

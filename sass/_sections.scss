@@ -56,36 +56,38 @@
             color: black;
         }
 
+        .colour-line::after {
+            display: none;
+        }
+
         p {
             padding: 1rem 0;
         }
 
         .about-list {
             margin: 0 0 2em 0;
-            line-height: 2em;
-            text-align: left;
 
-            dd {
-                width: 100%;
-                padding-left: 0;
-                margin-left: 0;
-            }
-
-            .about-list-item {
-                display: list-item;
-                float: left;
-                padding: 0;
-                margin: 0;
+            .about-list-term {
+                display: inline;
                 font-size: 1.2em;
                 color: black;
-                list-style-position: inside;
-                list-style-image: url(/images/marker.svg);
+
+                &::before {
+                    white-space: pre;
+                    content: url(/images/marker.svg) " ";
+                }
 
                 &::after {
                     font-weight: bold;
                     white-space: pre;
                     content: " - ";
                 }
+            }
+
+            .about-list-definition {
+                display: inline;
+                width: 100%;
+                line-height: 2em;
             }
         }
     }
@@ -97,10 +99,16 @@
     color: white;
 
     .team-img {
-        max-width: 50%;
-        max-height: 50%;
+        width: 130px;
+        height: 130px;
         margin: 0 auto;
+        overflow: hidden;
         border-radius: 50%;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 
     .team-item-title {
@@ -219,7 +227,7 @@
             margin: -0.5rem 0;
 
             .filter-item {
-                @include transition(all);
+                @include transition(color font-weight);
 
                 padding: 0 1rem;
                 margin: 0.5rem 0;
@@ -231,13 +239,8 @@
                 }
 
                 &:hover {
-                    padding: 0.5rem 1rem;
                     font-weight: bold;
-                    color: white;
-                    background-color: $orange;
-                    border: none;
-                    border-radius: 5px;
-                    box-shadow: 0 0 0 4px $gray;
+                    color: black;
                 }
             }
         }

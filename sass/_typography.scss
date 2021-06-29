@@ -78,7 +78,7 @@ a {
 }
 
 img {
-    object-fit: contain;
+    // object-fit: contain;
     width: 100%;
     height: 100%;
 }
@@ -95,23 +95,21 @@ button {
     border-style: none;
 }
 
-%line {
-    height: 4px;
-    margin: 0.75em auto;
-}
-
-.colour-line, .under-colour-line {
-    @extend %line;
- }
-
 .colour-line {
+    position: relative;
     width: 6rem;
+    height: 0.25rem;
+    margin: 0.75rem auto 6.5rem;
     background-color: $orange;
-} 
 
-.under-colour-line {
-    width: 4rem;
-    margin-bottom: 3rem;
+    &::after {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 4rem;
+        height: 0.25rem;
+        content: '';
+    }
 }
 
 %block {
@@ -129,7 +127,7 @@ button {
         color: white;
     }
 
-    .under-colour-line {
+    .colour-line::after {
         background-color: #b37b33;
     }
 }
@@ -143,7 +141,7 @@ button {
         color: black;
     }
 
-    .under-colour-line {
+    .colour-line::after {
         background-color: #fdc57c;
     }
 }
