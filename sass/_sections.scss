@@ -285,12 +285,12 @@
                     opacity: 0.8;
                 }
 
-                h3 {
+                h2 {
                     color: white;
                 }
 
                 p {
-                    line-height: 1rem;
+                    font-size: 0.875rem;
                 }
             }
         }
@@ -308,7 +308,7 @@
     }
 
     .testimonials-author a{
-        @include transition(all);
+        @include transition(font-weight color);
 
         &:hover {
             font-weight: bold;

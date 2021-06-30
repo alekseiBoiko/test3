@@ -29,13 +29,14 @@ i {
 
 b {
   font-family: 'GothamBold', 'arial', sans-serif;
-  font-style: normal; }
+  font-style: normal;
+  font-weight: 100; }
 
 body {
   width: 100%;
   font-family: 'Gotham', 'arial', sans-serif;
   font-size: 16px;
-  color: #999; }
+  color: #6c6c6c; }
 
 h1 {
   margin-bottom: 1em;
@@ -61,12 +62,21 @@ a {
   text-decoration: none; }
 
 img {
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 100%; }
 
 input, textarea {
+  width: 100%;
+  padding: 1rem;
   background: none;
-  border: none; }
+  border: 2px solid #6c6c6c; }
+  input:hover, input:focus, textarea:hover, textarea:focus {
+    -webkit-box-shadow: 0 3px 5px #6c6c6c;
+    box-shadow: 0 3px 5px #6c6c6c; }
+  input:invalid, textarea:invalid {
+    border: 2px solid red; }
 
 button {
   -webkit-transition: background-color 0.5s ease 0s , color 0.5s ease 0s , border 0.5s ease 0s;
@@ -164,24 +174,31 @@ button {
     transform-origin: center; }
 
 .welcome-button {
-  padding: 1em;
+  -webkit-transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
+  transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
   background-color: black;
-  border: solid 2px;
+  border: solid 2px #6c6c6c;
   border-radius: 50%; }
   .welcome-button:hover {
-    color: #fcac45; }
+    color: #fcac45;
+    border-color: #fcac45; }
 
 .about-button {
+  -webkit-transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
+  transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
   padding: 1em;
   font-size: 0.75rem;
   line-height: 3em;
   text-transform: uppercase;
   vertical-align: middle;
   background-color: unset;
-  border: 2px solid #999;
-  border-radius: 3px;
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s; }
+  border: 2px solid #6c6c6c;
+  border-radius: 3px; }
   .about-button:hover {
     color: #fcac45;
     border-color: #fcac45; }
@@ -189,11 +206,21 @@ button {
     margin-right: 1rem; }
 
 .works-overlay-button {
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: lighter;
   color: #fcac45;
-  vertical-align: middle;
   background-color: inherit;
   border: 2px solid #fcac45;
   border-radius: 50%; }
@@ -221,31 +248,20 @@ button {
     margin-bottom: 1rem;
     text-align: left; }
     .contact-forms .form-input input {
-      width: 100%;
-      padding: 1rem;
-      border: 2px solid #999;
       -webkit-transition: -webkit-box-shadow 0.5s ease 0s;
       transition: -webkit-box-shadow 0.5s ease 0s;
       transition: box-shadow 0.5s ease 0s;
       transition: box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s; }
-      .contact-forms .form-input input:hover, .contact-forms .form-input input:focus {
-        -webkit-box-shadow: 0 3px 5px #999;
-        box-shadow: 0 3px 5px #999; }
   .contact-forms .form-textarea {
     width: 100%;
     padding: 2rem 0;
     text-align: left; }
     .contact-forms .form-textarea textarea {
-      width: 100%;
-      height: 10rem;
-      border: 2px solid #999;
       -webkit-transition: -webkit-box-shadow 0.5s ease 0s;
       transition: -webkit-box-shadow 0.5s ease 0s;
       transition: box-shadow 0.5s ease 0s;
-      transition: box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s; }
-      .contact-forms .form-textarea textarea:hover, .contact-forms .form-textarea textarea:focus {
-        -webkit-box-shadow: 0 3px 5px #999;
-        box-shadow: 0 3px 5px #999; }
+      transition: box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+      height: 10rem; }
   .contact-forms .empty {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%; }
@@ -518,11 +534,11 @@ button {
       border: solid 5px #fcac45;
       border-radius: 50%; }
     .services .services-list .services-items-link:hover {
-      -webkit-box-shadow: 0 0 0 4px #999;
-      box-shadow: 0 0 0 4px #999; }
+      -webkit-box-shadow: 0 0 0 4px #6c6c6c;
+      box-shadow: 0 0 0 4px #6c6c6c; }
       .services .services-list .services-items-link:hover .services-icon {
         background-color: #fcac45;
-        border-color: #999; }
+        border-color: #6c6c6c; }
     .services .services-list .services-items-link .services-items-description {
       width: 100%;
       font-size: inherit;
@@ -574,7 +590,7 @@ button {
         padding: 0 1rem;
         margin: 0.5rem 0;
         background: none;
-        border-right: 2px solid #999; }
+        border-right: 2px solid #6c6c6c; }
         .works .works-filter .filter-list .filter-item:last-child {
           border-right: none; }
         .works .works-filter .filter-list .filter-item:hover {
@@ -619,10 +635,10 @@ button {
           -webkit-transition: opacity 0.5s ease 0s;
           transition: opacity 0.5s ease 0s;
           opacity: 0.8; }
-        .works .works-list .works-item-holder .works-overlay h3 {
+        .works .works-list .works-item-holder .works-overlay h2 {
           color: white; }
         .works .works-list .works-item-holder .works-overlay p {
-          line-height: 1rem; }
+          font-size: 0.875rem; }
 
 .testimonials .testimonials-text {
   margin-bottom: 2rem;
@@ -630,8 +646,8 @@ button {
   text-transform: uppercase; }
 
 .testimonials .testimonials-author a {
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s; }
+  -webkit-transition: font-weight 0.5s ease 0s , color 0.5s ease 0s;
+  transition: font-weight 0.5s ease 0s , color 0.5s ease 0s; }
   .testimonials .testimonials-author a:hover {
     font-weight: bold;
     color: white;
@@ -659,13 +675,11 @@ button {
   min-height: 90px;
   padding: 1rem 12%;
   background-color: #212121; }
-  #footer a {
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s; }
-    #footer a:hover {
-      font-weight: bold;
-      color: #fcac45;
-      text-decoration: none; }
+  #footer a:first-child {
+    -webkit-transition: color 0.5s ease 0s , background-color 0.5s ease 0s;
+    transition: color 0.5s ease 0s , background-color 0.5s ease 0s; }
+    #footer a:first-child:hover {
+      color: #fcac45; }
 
 .social-icons-list {
   display: -webkit-box;
@@ -681,18 +695,20 @@ button {
   align-items: center;
   margin-left: 1rem; }
   .social-icons-list .social-icons {
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    -webkit-transition: background-color 0.5s ease 0s , color 0.5s ease 0s;
+    transition: background-color 0.5s ease 0s , color 0.5s ease 0s;
+    display: block;
     width: 3rem;
+    height: 3rem;
     margin-left: 0.5rem;
     line-height: 3rem;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid #999;
+    border: 2px solid #6c6c6c;
     border-radius: 50%; }
     .social-icons-list .social-icons:hover {
       background-color: #fcac45;
-      border: none; }
+      border-color: #fcac45; }
       .social-icons-list .social-icons:hover i {
         color: white; }
 
@@ -762,7 +778,12 @@ button {
       .works-filter .filter-list .filter-item {
         width: 50%; }
         .works-filter .filter-list .filter-item:nth-child(2) {
-          border-right: none; } }
+          border-right: none; }
+  .works-overlay-button {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem; } }
 
 @media only screen and (max-width: 576px) {
   body {
@@ -776,10 +797,6 @@ button {
     width: 48%; }
     .works-item h3 {
       font-size: 0.75rem; }
-    .works-item .works-overlay-button {
-      width: 2rem;
-      height: 2rem;
-      line-height: 2rem; }
   .form-input {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%; }
@@ -792,5 +809,6 @@ button {
     width: 5rem; }
     #footer .social-icons-list .social-icons {
       width: 2rem;
+      height: 2rem;
       margin: 0 0 0.3rem 0.3rem;
-      line-height: 1.5rem; } }
+      line-height: 2rem; } }

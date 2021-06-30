@@ -5,13 +5,11 @@
     padding: 1rem $padding-hor;
     background-color: #212121;
 
-    a {
-        @include transition(all);
+    a:first-child {
+        @include transition(color background-color);
 
         &:hover {
-            font-weight: bold;
             color: $orange;
-            text-decoration: none;
         }
     }
 }

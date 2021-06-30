@@ -4,9 +4,11 @@
     margin-left: 1rem;
 
     .social-icons {
-        @include transition(all);
+        @include transition(background-color color);
 
+        display: block;
         width: 3rem;
+        height: 3rem;
         margin-left: 0.5rem;
         line-height: 3rem;
         text-align: center;
@@ -16,7 +18,7 @@
 
         &:hover {
             background-color: $orange;
-            border: none;
+            border-color: $orange;
 
             i {
                 color: white;

@@ -65,17 +65,26 @@
 }
 
 .welcome-button {
-    padding: 1em;
+    @include transition(color border-color);
+
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
     background-color: black;
-    border: solid 2px;
+    border: solid 2px $gray;
     border-radius: 50%;
 
     &:hover {
         color: $orange;
+        border-color: $orange;
     }
 }
 
 .about-button {
+    @include transition(color border-color);
+
     padding: 1em;
     font-size: 0.75rem;
     line-height: 3em;
@@ -84,7 +93,6 @@
     background-color: unset;
     border: 2px solid $gray;
     border-radius: 3px;
-    @include transition(all);
 
     &:hover {
         color: $orange;
@@ -97,11 +105,14 @@
 }
 
 .works-overlay-button {
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
+    @include flex(null,null,center, center);
+
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: lighter;
     color: $orange;
-    vertical-align: middle;
     background-color: inherit;
     border: 2px solid $orange;
     border-radius: 50%;
@@ -126,14 +137,7 @@
         text-align: left;
 
         input {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid $gray;
             @include transition(box-shadow);
-
-            &:hover, &:focus {
-                box-shadow: 0 3px 5px $gray;
-            }
         }
     }
 
@@ -143,17 +147,12 @@
         text-align: left;
 
         textarea {
-            width: 100%;
-            height: 10rem;
-            border: 2px solid $gray;
             @include transition(box-shadow);
 
-            &:hover, &:focus {
-                box-shadow: 0 3px 5px $gray;
-            }
+            height: 10rem;
         }
     }
-    
+
     .empty {
         flex-basis: 75%;
     }
@@ -171,5 +170,5 @@
             color: $orange;
             background-color: white;
         }
-    }    
+    }
 }

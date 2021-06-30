@@ -1,1 +1,128 @@
-@import '_slick';
+$orange: #fcac45;
+
+/* Slider styles */
+
+%slick-slider {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 5% -5px 0;
+    -webkit-touch-callout: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    .slick-track, .slick-list {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            width: 10px;
+            height: 15px;
+            font-size: 0;
+            background-color: #fff;
+        }
+
+        li {
+            margin: 0 10px;
+            list-style: none;
+
+            &.slick-active button {
+                background-color: $orange;
+            }
+        }
+    }
+
+    .slick-list {
+        position: relative;
+        display: block;
+        padding: 0;
+        margin-bottom: 5%;
+        overflow: hidden;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.dragging {
+            cursor: pointer;
+            cursor: hand;
+        }
+    }
+
+    .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        &::before, &::after {
+            display: table;
+            content: "";
+        }
+
+        &::after {
+            clear: both;
+        }
+
+        .slick-loading & {
+            visibility: hidden;
+        }
+    }
+
+    .slick-slide {
+        float: left;
+        min-width: 0;
+        min-height: 1px;
+        padding: 0 15px;
+        margin: 0 5px;
+        text-align: center;
+
+        [dir="rtl"] & {
+            float: right;
+        }
+
+        &.slick-loading img {
+            display: none;
+        }
+
+        &.dragging img {
+            pointer-events: none;
+        }
+
+        .slick-initialized & {
+            display: block;
+        }
+
+        .slick-loading & {
+            visibility: hidden;
+        }
+
+        .slick-vertical & {
+            display: block;
+            height: auto;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+.slick-slider-team, .slick-slider-clients, .slick-slider-testimonials {
+    @extend %slick-slider;
+}
