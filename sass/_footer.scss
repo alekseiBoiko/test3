@@ -3,13 +3,23 @@
 
     min-height: 90px;
     padding: 1rem $padding-hor;
+    color: #b2b2b2;
     background-color: #212121;
 
-    a:first-child {
-        @include transition(color background-color);
+    .copyright {
+        font-size: 0.75rem;
+        text-transform: uppercase;
 
-        &:hover {
-            color: $orange;
+        a {
+            @include transition(color background-color);
+
+            b {
+                font-weight: 700;
+            }
+
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }

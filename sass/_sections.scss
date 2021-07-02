@@ -12,13 +12,23 @@
     }
 
     .welcome-tittle {
+        font-size: 2.75rem;
+        color: #999;
+
         b {
+            font-weight: 700;
             color: $orange;
         }
     }
 
-    p {
+    .welcome-description {
         margin-top: 1em;
+        font-size: 1.25rem;
+        color: #fff;
+
+        b {
+            font-weight: 700;
+        }
     }
 }
 
@@ -43,25 +53,32 @@
             transform: scale(1);
         }
 
-        h1 {
-            margin: 0;
+        h3 {
+            color: #636363;
         }
 
         .colour-line {
             margin: 0;
+
+            &::after {
+                display: none;
+            }
         }
 
         .about-title {
             margin: 1rem 0;
-            color: black;
+            font-size: 2.125rem;
+            color: #222;
+            text-transform: uppercase;
+
+            b {
+                font-weight: 700;
+            }
         }
 
-        .colour-line::after {
-            display: none;
-        }
-
-        p {
+        .about-text {
             padding: 1rem 0;
+            font-size: 1.125;
         }
 
         .about-list {
@@ -69,8 +86,8 @@
 
             .about-list-term {
                 display: inline;
-                font-size: 1.2em;
-                color: black;
+                font-size: 1.125rem;
+                color: #5a5a5a;
 
                 &::before {
                     white-space: pre;
@@ -120,11 +137,15 @@
             &:hover {
                 color: $orange;
             }
+
+            b {
+                font-weight: 700;
+            }
         }
     }
 
     .team-item-description {
-        font-size: 0.88rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -140,6 +161,7 @@
         overflow: hidden;
 
         .services-items {
+            color: #222;
             opacity: 0;
             transform: translate(0, 120%);
         }
@@ -183,11 +205,16 @@
                 }
             }
 
+            .services-items-tittle {
+                margin: 1rem 0;
+                font-size: 1.5625rem;
+                text-transform: uppercase;
+            }
+
             .services-items-description {
                 width: 100%;
                 font-size: inherit;
-                font-size: 0.88rem;
-                color: black;
+                font-size: 0.875rem;
             }
         }
     }
@@ -216,14 +243,23 @@
 
         width: 100%;
         margin-bottom: 1rem;
+        font-size: 1.125rem;
+        color: #222;
 
         .filter-type {
-            color: black;
+            min-width: 20%;
+            padding: 0;
+            text-transform: uppercase;
+
+            b {
+                display: block;
+            }
         }
 
         .filter-list {
             @include flex(null,null,flex-end, center);
 
+            width: 100%;
             margin: -0.5rem 0;
 
             .filter-item {
@@ -231,6 +267,7 @@
 
                 padding: 0 1rem;
                 margin: 0.5rem 0;
+                text-transform: none;
                 background: none;
                 border-right: 2px solid $gray;
 
@@ -239,8 +276,7 @@
                 }
 
                 &:hover {
-                    font-weight: bold;
-                    color: black;
+                    font-weight: 600;
                 }
             }
         }
@@ -250,8 +286,7 @@
         }
 
         .filter-active {
-            font-weight: bold;
-            color: black;
+            font-weight: 600;
         }
     }
 
@@ -285,16 +320,16 @@
                     opacity: 0.8;
                 }
 
-                h2 {
+                h3 {
                     color: white;
                 }
 
-                p {
+                .overlay-chosen-filter {
                     font-size: 0.875rem;
+                    color: #b2b2b2;
                 }
             }
         }
-    
     }
 }
 
@@ -303,17 +338,24 @@
 
     .testimonials-text {
         margin-bottom: 2rem;
-        color: white;
+        font-size: 1.125rem;
+        color: #e7e7e7;
         text-transform: uppercase;
     }
 
-    .testimonials-author a{
-        @include transition(font-weight color);
+    .testimonials-author {
+        font-size: 1.125rem;
+        font-weight: 300;
+        color: #b2b2b2;
 
-        &:hover {
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
+        a {
+            @include transition(font-weight color);
+
+            &:hover {
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }

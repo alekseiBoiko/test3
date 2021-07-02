@@ -23,35 +23,34 @@
   src: url(../fonts/Gotham-Font/gothambold.eot?#iefix) format("embedded-opentype"), url(../fonts/Gotham-Font/gothambold.ttf) format("truetype"), url(../fonts/Gotham-Font/gothambold.woff2) format("woff2"), url(../fonts/Gotham-Font/gothambold.woff) format("woff"), url(../fonts/Gotham-Font/gothambold.svg#svgFontName) format("svg");
   /* Legacy iOS */ }
 
-i {
-  font-family: 'GothamItalic', 'arial', sans-serif;
-  font-style: italic; }
-
-b {
-  font-family: 'GothamBold', 'arial', sans-serif;
-  font-style: normal;
-  font-weight: 100; }
-
 body {
   width: 100%;
-  font-family: 'Gotham', 'arial', sans-serif;
+  font-family: 'Open Sans', 'arial', sans-serif;
   font-size: 16px;
   color: #6c6c6c; }
 
+i {
+  font-style: italic; }
+
+b {
+  font-weight: 600; }
+
 h1 {
   margin-bottom: 1em;
-  font-size: 2em;
+  font-size: 2.75rem;
+  font-weight: 300;
   text-transform: uppercase; }
 
 h2 {
   padding: 1rem 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: black;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif; }
 
 h3 {
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-transform: uppercase; }
 
 p {
@@ -113,7 +112,7 @@ button {
 .about, .services, .works, .contact {
   background-color: white; }
   .about h1, .services h1, .works h1, .contact h1 {
-    color: black; }
+    color: #222; }
   .about .colour-line::after, .services .colour-line::after, .works .colour-line::after, .contact .colour-line::after {
     background-color: #fdc57c; }
 
@@ -262,13 +261,15 @@ button {
       transition: box-shadow 0.5s ease 0s;
       transition: box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
       height: 10rem; }
+  .contact-forms .form-name {
+    font-size: 0.875rem; }
   .contact-forms .empty {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%; }
   .contact-forms .contact-button {
     width: 25%;
     line-height: 3em;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     background-color: #fcac45;
@@ -302,13 +303,13 @@ button {
   color: white;
   background-color: black; }
   .header .logo {
+    -webkit-transition: color 0.5s ease 0s;
+    transition: color 0.5s ease 0s;
     margin: auto 0;
+    font-family: 'Lato', sans-serif;
     color: white; }
-    .header .logo a {
-      -webkit-transition: color 0.5s ease 0s;
-      transition: color 0.5s ease 0s; }
-      .header .logo a b:hover {
-        color: #fcac45; }
+    .header .logo b:hover {
+      color: #fcac45; }
   .header .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -325,7 +326,9 @@ button {
       position: relative;
       padding: 1rem 0;
       margin: 0 0.5rem;
-      font-size: 0.75rem;
+      font-family: 'Lato', 'arial', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
       text-transform: uppercase; }
       .header .nav .nav-item::after {
         -webkit-transition: opacity 0.5s ease 0s;
@@ -370,10 +373,18 @@ button {
     width: 100%;
     padding-bottom: 20%;
     text-align: center; }
-  .welcome .welcome-tittle b {
-    color: #fcac45; }
-  .welcome p {
-    margin-top: 1em; }
+  .welcome .welcome-tittle {
+    font-size: 2.75rem;
+    color: #999; }
+    .welcome .welcome-tittle b {
+      font-weight: 700;
+      color: #fcac45; }
+  .welcome .welcome-description {
+    margin-top: 1em;
+    font-size: 1.25rem;
+    color: #fff; }
+    .welcome .welcome-description b {
+      font-weight: 700; }
 
 .about {
   display: -webkit-box;
@@ -406,23 +417,28 @@ button {
     .about .about-block .about-image._active {
       -webkit-transform: scale(1);
       transform: scale(1); }
-    .about .about-block h1 {
-      margin: 0; }
+    .about .about-block h3 {
+      color: #636363; }
     .about .about-block .colour-line {
       margin: 0; }
+      .about .about-block .colour-line::after {
+        display: none; }
     .about .about-block .about-title {
       margin: 1rem 0;
-      color: black; }
-    .about .about-block .colour-line::after {
-      display: none; }
-    .about .about-block p {
-      padding: 1rem 0; }
+      font-size: 2.125rem;
+      color: #222;
+      text-transform: uppercase; }
+      .about .about-block .about-title b {
+        font-weight: 700; }
+    .about .about-block .about-text {
+      padding: 1rem 0;
+      font-size: 1.125; }
     .about .about-block .about-list {
       margin: 0 0 2em 0; }
       .about .about-block .about-list .about-list-term {
         display: inline;
-        font-size: 1.2em;
-        color: black; }
+        font-size: 1.125rem;
+        color: #5a5a5a; }
         .about .about-block .about-list .about-list-term::before {
           white-space: pre;
           content: url(/images/marker.svg) " "; }
@@ -452,8 +468,10 @@ button {
       font-size: 1.25em; }
       .team .team-item-title .team-item-name:hover {
         color: #fcac45; }
+      .team .team-item-title .team-item-name b {
+        font-weight: 700; }
   .team .team-item-description {
-    font-size: 0.88rem; }
+    font-size: 0.875rem; }
 
 .services .services-list {
   display: -webkit-box;
@@ -476,6 +494,7 @@ button {
   margin: -10px;
   overflow: hidden; }
   .services .services-list .services-items {
+    color: #222;
     opacity: 0;
     -webkit-transform: translate(0, 120%);
     transform: translate(0, 120%); }
@@ -539,11 +558,14 @@ button {
       .services .services-list .services-items-link:hover .services-icon {
         background-color: #fcac45;
         border-color: #6c6c6c; }
+    .services .services-list .services-items-link .services-items-tittle {
+      margin: 1rem 0;
+      font-size: 1.5625rem;
+      text-transform: uppercase; }
     .services .services-list .services-items-link .services-items-description {
       width: 100%;
       font-size: inherit;
-      font-size: 0.88rem;
-      color: black; }
+      font-size: 0.875rem; }
 
 .clients .clients-logo {
   width: 100%;
@@ -570,9 +592,15 @@ button {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    color: #222; }
     .works .works-filter .filter-type {
-      color: black; }
+      min-width: 20%;
+      padding: 0;
+      text-transform: uppercase; }
+      .works .works-filter .filter-type b {
+        display: block; }
     .works .works-filter .filter-list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -583,24 +611,24 @@ button {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      width: 100%;
       margin: -0.5rem 0; }
       .works .works-filter .filter-list .filter-item {
         -webkit-transition: color 0.5s ease 0s , font-weight 0.5s ease 0s;
         transition: color 0.5s ease 0s , font-weight 0.5s ease 0s;
         padding: 0 1rem;
         margin: 0.5rem 0;
+        text-transform: none;
         background: none;
         border-right: 2px solid #6c6c6c; }
         .works .works-filter .filter-list .filter-item:last-child {
           border-right: none; }
         .works .works-filter .filter-list .filter-item:hover {
-          font-weight: bold;
-          color: black; }
+          font-weight: 600; }
     .works .works-filter .filter-list_active {
       right: 0; }
     .works .works-filter .filter-active {
-      font-weight: bold;
-      color: black; }
+      font-weight: 600; }
   .works .works-list {
     margin: -1rem; }
     .works .works-list .works-item-holder {
@@ -635,23 +663,29 @@ button {
           -webkit-transition: opacity 0.5s ease 0s;
           transition: opacity 0.5s ease 0s;
           opacity: 0.8; }
-        .works .works-list .works-item-holder .works-overlay h2 {
+        .works .works-list .works-item-holder .works-overlay h3 {
           color: white; }
-        .works .works-list .works-item-holder .works-overlay p {
-          font-size: 0.875rem; }
+        .works .works-list .works-item-holder .works-overlay .overlay-chosen-filter {
+          font-size: 0.875rem;
+          color: #b2b2b2; }
 
 .testimonials .testimonials-text {
   margin-bottom: 2rem;
-  color: white;
+  font-size: 1.125rem;
+  color: #e7e7e7;
   text-transform: uppercase; }
 
-.testimonials .testimonials-author a {
-  -webkit-transition: font-weight 0.5s ease 0s , color 0.5s ease 0s;
-  transition: font-weight 0.5s ease 0s , color 0.5s ease 0s; }
-  .testimonials .testimonials-author a:hover {
-    font-weight: bold;
-    color: white;
-    text-decoration: none; }
+.testimonials .testimonials-author {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #b2b2b2; }
+  .testimonials .testimonials-author a {
+    -webkit-transition: font-weight 0.5s ease 0s , color 0.5s ease 0s;
+    transition: font-weight 0.5s ease 0s , color 0.5s ease 0s; }
+    .testimonials .testimonials-author a:hover {
+      font-weight: bold;
+      color: white;
+      text-decoration: none; }
 
 .contact .contact-forms {
   padding: 0 12%; }
@@ -674,12 +708,18 @@ button {
   align-items: center;
   min-height: 90px;
   padding: 1rem 12%;
+  color: #b2b2b2;
   background-color: #212121; }
-  #footer a:first-child {
-    -webkit-transition: color 0.5s ease 0s , background-color 0.5s ease 0s;
-    transition: color 0.5s ease 0s , background-color 0.5s ease 0s; }
-    #footer a:first-child:hover {
-      color: #fcac45; }
+  #footer .copyright {
+    font-size: 0.75rem;
+    text-transform: uppercase; }
+    #footer .copyright a {
+      -webkit-transition: color 0.5s ease 0s , background-color 0.5s ease 0s;
+      transition: color 0.5s ease 0s , background-color 0.5s ease 0s; }
+      #footer .copyright a b {
+        font-weight: 700; }
+      #footer .copyright a:hover {
+        color: #fcac45; }
 
 .social-icons-list {
   display: -webkit-box;
@@ -697,13 +737,24 @@ button {
   .social-icons-list .social-icons {
     -webkit-transition: background-color 0.5s ease 0s , color 0.5s ease 0s;
     transition: background-color 0.5s ease 0s , color 0.5s ease 0s;
-    display: block;
-    width: 3rem;
-    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: unset;
+    flex-wrap: unset;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+    -ms-flex-direction: unset;
+    flex-direction: unset;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
     margin-left: 0.5rem;
-    line-height: 3rem;
-    text-align: center;
-    vertical-align: middle;
     border: 2px solid #6c6c6c;
     border-radius: 50%; }
     .social-icons-list .social-icons:hover {
