@@ -36,7 +36,7 @@ b {
   font-weight: 600; }
 
 h1 {
-  margin-bottom: 1em;
+  margin: 2rem 0 1.7rem;
   font-size: 2.75rem;
   font-weight: 300;
   text-transform: uppercase; }
@@ -49,7 +49,7 @@ h2 {
   font-family: 'Lato', sans-serif; }
 
 h3 {
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   font-size: 1.25rem;
   text-transform: uppercase; }
 
@@ -87,7 +87,6 @@ button {
   position: relative;
   width: 6rem;
   height: 0.25rem;
-  margin: 0.75rem auto 6.5rem;
   background-color: #fcac45; }
   .colour-line::after {
     position: absolute;
@@ -190,7 +189,7 @@ button {
 .about-button {
   -webkit-transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
   transition: color 0.5s ease 0s , border-color 0.5s ease 0s;
-  padding: 1em;
+  padding: 1em 1.6rem;
   font-size: 0.75rem;
   line-height: 3em;
   text-transform: uppercase;
@@ -202,7 +201,7 @@ button {
     color: #fcac45;
     border-color: #fcac45; }
   .about-button .fa-briefcase {
-    margin-right: 1rem; }
+    margin-right: 0.5rem; }
 
 .works-overlay-button {
   display: -webkit-box;
@@ -297,7 +296,7 @@ button {
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 5rem;
+  height: 8.125rem;
   padding: 0 12%;
   font-weight: 700;
   color: white;
@@ -321,11 +320,12 @@ button {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    margin: 0 -0.84rem; }
     .header .nav .nav-item {
       position: relative;
       padding: 1rem 0;
-      margin: 0 0.5rem;
+      margin: 0 0.84rem;
       font-family: 'Lato', 'arial', sans-serif;
       font-size: 0.875rem;
       font-weight: 700;
@@ -334,11 +334,11 @@ button {
         -webkit-transition: opacity 0.5s ease 0s;
         transition: opacity 0.5s ease 0s;
         position: absolute;
-        top: 2rem;
-        left: 0;
-        width: 100%;
+        top: 3rem;
+        left: -10%;
+        width: 120%;
         content: '';
-        border-bottom: 5px solid;
+        border-bottom: 4px solid;
         border-image-source: linear-gradient(to right, #292929 50%, #fcac45 50%);
         border-image-slice: 1;
         opacity: 0; }
@@ -374,15 +374,17 @@ button {
     padding-bottom: 20%;
     text-align: center; }
   .welcome .welcome-tittle {
+    margin-bottom: 1.25rem;
     font-size: 2.75rem;
-    color: #999; }
+    color: #999;
+    letter-spacing: -2px; }
     .welcome .welcome-tittle b {
       font-weight: 700;
       color: #fcac45; }
   .welcome .welcome-description {
-    margin-top: 1em;
     font-size: 1.25rem;
-    color: #fff; }
+    color: #fff;
+    letter-spacing: -1px; }
     .welcome .welcome-description b {
       font-weight: 700; }
 
@@ -399,60 +401,70 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 100vh; }
-  .about .about-block {
-    width: 45%;
-    margin: 0 auto;
-    text-align: left; }
-    .about .about-block .about-image {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0 -1rem; }
+  .about .about-img-block, .about .about-txt-block {
+    width: 44.5%; }
+  .about .about-img-block {
+    margin: 2.5rem 1rem; }
+    .about .about-img-block .about-image {
       -webkit-transition: -webkit-transform 0.5s ease 0s;
       transition: -webkit-transform 0.5s ease 0s;
       transition: transform 0.5s ease 0s;
       transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
       -webkit-transform: scale(0);
       transform: scale(0); }
-    .about .about-block .about-image._active {
+    .about .about-img-block .about-image._active {
       -webkit-transform: scale(1);
       transform: scale(1); }
-    .about .about-block h3 {
+  .about .about-txt-block {
+    padding-left: 4.25rem;
+    margin-top: 2.32rem;
+    text-align: left; }
+    .about .about-txt-block h3 {
+      margin: 0;
       color: #636363; }
-    .about .about-block .colour-line {
-      margin: 0; }
-      .about .about-block .colour-line::after {
+    .about .about-txt-block .colour-line {
+      margin: 0.5rem 0 1.65rem; }
+      .about .about-txt-block .colour-line::after {
         display: none; }
-    .about .about-block .about-title {
-      margin: 1rem 0;
+    .about .about-txt-block .about-title {
+      margin-top: 3px;
       font-size: 2.125rem;
       color: #222;
-      text-transform: uppercase; }
-      .about .about-block .about-title b {
+      text-transform: uppercase;
+      letter-spacing: -0.8px; }
+      .about .about-txt-block .about-title b {
         font-weight: 700; }
-    .about .about-block .about-text {
-      padding: 1rem 0;
-      font-size: 1.125; }
-    .about .about-block .about-list {
-      margin: 0 0 2em 0; }
-      .about .about-block .about-list .about-list-term {
+    .about .about-txt-block .about-text {
+      font-size: 1.125;
+      line-height: 1.55em;
+      letter-spacing: 0.15px; }
+    .about .about-txt-block .about-list {
+      margin: 2.25rem 0 3rem 0;
+      line-height: 2em; }
+      .about .about-txt-block .about-list .about-list-term {
         display: inline;
         font-size: 1.125rem;
         color: #5a5a5a; }
-        .about .about-block .about-list .about-list-term::before {
+        .about .about-txt-block .about-list .about-list-term::before {
           white-space: pre;
-          content: url(/images/marker.svg) " "; }
-        .about .about-block .about-list .about-list-term::after {
+          content: url(/images/marker.png) " "; }
+        .about .about-txt-block .about-list .about-list-term::after {
           font-weight: bold;
           white-space: pre;
           content: " - "; }
-      .about .about-block .about-list .about-list-definition {
+      .about .about-txt-block .about-list .about-list-definition {
         display: inline;
         width: 100%;
-        line-height: 2em; }
+        letter-spacing: -0.15px; }
 
 .team {
   color: white; }
+  .team .colour-line {
+    margin: 0.75rem auto 6.5rem; }
   .team .team-img {
     width: 130px;
     height: 130px;
@@ -463,7 +475,7 @@ button {
       width: auto;
       height: 100%; }
   .team .team-item-title {
-    padding: 1em 0; }
+    padding: 1.2rem 0 2rem; }
     .team .team-item-title .team-item-name {
       font-size: 1.25em; }
       .team .team-item-title .team-item-name:hover {
@@ -471,7 +483,11 @@ button {
       .team .team-item-title .team-item-name b {
         font-weight: 700; }
   .team .team-item-description {
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+    line-height: 1.4rem; }
+
+.services .colour-line {
+  margin: 0.75rem auto 3rem; }
 
 .services .services-list {
   display: -webkit-box;
@@ -490,7 +506,7 @@ button {
   -ms-flex-align: unset;
   align-items: unset;
   width: 100%;
-  padding: 4%;
+  padding: 6.4rem 0;
   margin: -10px;
   overflow: hidden; }
   .services .services-list .services-items {

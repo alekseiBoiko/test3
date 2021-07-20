@@ -29,7 +29,7 @@
     justify-content: center; }
     .slick-slider-team .slick-dots button, .slick-slider-clients .slick-dots button, .slick-slider-testimonials .slick-dots button {
       width: 10px;
-      height: 15px;
+      height: 10px;
       font-size: 0;
       background-color: #fff; }
     .slick-slider-team .slick-dots li, .slick-slider-clients .slick-dots li, .slick-slider-testimonials .slick-dots li {

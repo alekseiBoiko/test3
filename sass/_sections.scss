@@ -12,8 +12,10 @@
     }
 
     .welcome-tittle {
+        margin-bottom: 1.25rem;
         font-size: 2.75rem;
         color: #999;
+        letter-spacing: -2px;
 
         b {
             font-weight: 700;
@@ -22,9 +24,9 @@
     }
 
     .welcome-description {
-        margin-top: 1em;
         font-size: 1.25rem;
         color: #fff;
+        letter-spacing: -1px;
 
         b {
             font-weight: 700;
@@ -33,15 +35,21 @@
 }
 
 .about {
-    @include flex(unset, unset, space-between, center);
+    @include flex(unset, unset, space-between, flex-start);
     @include block-style(white);
 
-    min-height: 100vh;
+    // align-items:flex-start
+    // min-height: 100vh;
+    margin: 0 -1rem;
 
-    .about-block {
-        width: 45%;
-        margin: 0 auto;
-        text-align: left;
+    %about-block {
+        width: 44.5%;
+    }
+
+    .about-img-block {
+        @extend %about-block;
+
+        margin: 2.5rem 1rem;
 
         .about-image {
             @include transition(transform);
@@ -52,13 +60,22 @@
         .about-image._active {
             transform: scale(1);
         }
+    }
+
+    .about-txt-block {
+        @extend %about-block;
+
+        padding-left: 4.25rem;
+        margin-top: 2.32rem;
+        text-align: left;
 
         h3 {
+            margin: 0;
             color: #636363;
         }
 
         .colour-line {
-            margin: 0;
+            margin: 0.5rem 0 1.65rem;
 
             &::after {
                 display: none;
@@ -66,10 +83,11 @@
         }
 
         .about-title {
-            margin: 1rem 0;
+            margin-top: 3px;
             font-size: 2.125rem;
             color: #222;
             text-transform: uppercase;
+            letter-spacing: -0.8px;
 
             b {
                 font-weight: 700;
@@ -77,12 +95,14 @@
         }
 
         .about-text {
-            padding: 1rem 0;
             font-size: 1.125;
+            line-height: 1.55em;
+            letter-spacing: 0.15px;
         }
 
         .about-list {
-            margin: 0 0 2em 0;
+            margin: 2.25rem 0 3rem 0;
+            line-height: 2em;
 
             .about-list-term {
                 display: inline;
@@ -91,7 +111,7 @@
 
                 &::before {
                     white-space: pre;
-                    content: url(/images/marker.svg) " ";
+                    content: url(/images/marker.png) " ";
                 }
 
                 &::after {
@@ -99,12 +119,19 @@
                     white-space: pre;
                     content: " - ";
                 }
+
+                // .about-list-marker {
+                //     display: inline;
+                //     float: left;
+                //     height: 1.125rem;
+                //     width: 1.125rem;
+                // }
             }
 
             .about-list-definition {
                 display: inline;
                 width: 100%;
-                line-height: 2em;
+                letter-spacing: -0.15px;
             }
         }
     }
@@ -114,6 +141,10 @@
     @include block-style(black);
 
     color: white;
+
+    .colour-line {
+        margin: 0.75rem auto 6.5rem;
+    }
 
     .team-img {
         width: 130px;
@@ -129,7 +160,7 @@
     }
 
     .team-item-title {
-        padding: 1em 0;
+        padding: 1.2rem 0 2rem;
 
         .team-item-name {
             font-size: 1.25em;
@@ -140,23 +171,29 @@
 
             b {
                 font-weight: 700;
+
             }
         }
     }
 
     .team-item-description {
         font-size: 0.875rem;
+        line-height: 1.4rem;
     }
 }
 
 .services {
     @include block-style(white);
 
+    .colour-line {
+        margin: 0.75rem auto 3rem;
+    }
+
     .services-list {
         @include flex(wrap, unset, center, unset);
 
         width: 100%;
-        padding: $padding-ver;
+        padding: 6.4rem 0;
         margin: -10px;
         overflow: hidden;
 

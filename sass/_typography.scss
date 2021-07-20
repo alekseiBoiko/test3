@@ -14,7 +14,7 @@ b {
 }
 
 h1 {
-    margin-bottom: 1em;
+    margin: 2rem 0 1.7rem;
     font-size: 2.75rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -29,7 +29,7 @@ h2 {
 }
 
 h3 {
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     font-size: 1.25rem;
     text-transform: uppercase;
 }
@@ -75,7 +75,6 @@ button {
     position: relative;
     width: 6rem;
     height: 0.25rem;
-    margin: 0.75rem auto 6.5rem;
     background-color: $orange;
 
     &::after {

@@ -4,7 +4,7 @@
     position: relative;
     z-index: 10;
     width: 100%;
-    height: 5rem;
+    height: 8.125rem;
     padding: 0 $padding-hor;
     font-weight: 700;
     color: white;
@@ -25,10 +25,12 @@
     .nav {
         @include flex(unset,null,space-between, center);
 
+        margin: 0 -0.84rem;
+
         .nav-item {
             position: relative;
             padding: 1rem 0;
-            margin: 0 0.5rem;
+            margin: 0 0.84rem;
             font-family: 'Lato', 'arial', sans-serif;
             font-size: 0.875rem;
             font-weight: 700;
@@ -38,11 +40,11 @@
                 @include transition(opacity);
 
                 position: absolute;
-                top: 2rem;
-                left: 0;
-                width: 100%;
+                top: 3rem;
+                left: -10%;
+                width: 120%;
                 content: '';
-                border-bottom: 5px solid;
+                border-bottom: 4px solid;
                 border-image-source: linear-gradient(to right, #292929 50%, #fcac45 50%);
                 border-image-slice: 1;
                 opacity: 0;
