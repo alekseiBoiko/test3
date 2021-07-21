@@ -38,8 +38,6 @@
     @include flex(unset, unset, space-between, flex-start);
     @include block-style(white);
 
-    // align-items:flex-start
-    // min-height: 100vh;
     margin: 0 -1rem;
 
     %about-block {
@@ -143,7 +141,11 @@
     color: white;
 
     .colour-line {
-        margin: 0.75rem auto 6.5rem;
+        margin-bottom: 6.5rem;
+    }
+
+    .slick-slider-team {
+        margin-bottom: 1.5rem;
     }
 
     .team-img {
@@ -186,21 +188,21 @@
     @include block-style(white);
 
     .colour-line {
-        margin: 0.75rem auto 3rem;
+        margin-bottom:  3rem;
     }
 
     .services-list {
-        @include flex(wrap, unset, center, unset);
+        @include flex(wrap, unset, space-between, unset);
 
         width: 100%;
-        padding: 6.4rem 0;
-        margin: -10px;
+        margin: 6.4rem 0 2rem;
         overflow: hidden;
 
         .services-items {
             color: #222;
             opacity: 0;
             transform: translate(0, 120%);
+            width: 23%;
         }
 
         &._active .services-items {
@@ -220,7 +222,6 @@
             @include flex(unset, column, unset, center);
             @include transition(box-shadow);
 
-            padding: 0.5rem;
             border-radius: 10px;
 
             .services-icon {
@@ -228,7 +229,7 @@
 
                 width: 125px;
                 height: 125px;
-                padding: 30px;
+                padding: 30px 30px 25px;
                 border: solid 5px $orange;
                 border-radius: 50%;
             }
@@ -243,7 +244,7 @@
             }
 
             .services-items-tittle {
-                margin: 1rem 0;
+                margin: 1.3rem 0 0.5rem;
                 font-size: 1.5625rem;
                 text-transform: uppercase;
             }
@@ -260,9 +261,18 @@
 .clients {
     @include block-style(black);
 
+    .colour-line {
+        margin: 0.75rem auto 7rem;
+    }
+
+    .slick-slider-clients {
+        margin-bottom: 2.5rem;
+    }
+
     .clients-logo {
         width: 100%;
         background-color: white;
+        margin-bottom: 1.8rem;
     }
 }
 
@@ -271,21 +281,22 @@
 
     min-height: 100vh;
 
-    p {
-        padding-bottom: $padding-ver;
+    .colour-line {
+        margin-bottom: 3rem;
     }
 
     .works-filter {
         @include flex(none,none,space-between, center);
 
         width: 100%;
-        margin-bottom: 1rem;
+        margin: 3.5rem 0 3.6rem;
         font-size: 1.125rem;
         color: #222;
 
         .filter-type {
             min-width: 20%;
             padding: 0;
+            text-align: left;
             text-transform: uppercase;
 
             b {
@@ -297,18 +308,18 @@
             @include flex(null,null,flex-end, center);
 
             width: 100%;
-            margin: -0.5rem 0;
 
             .filter-item {
                 @include transition(color font-weight);
 
-                padding: 0 1rem;
-                margin: 0.5rem 0;
+                padding: 0 0.85rem;
+                text-align: right;
                 text-transform: none;
                 background: none;
                 border-right: 2px solid $gray;
 
                 &:last-child {
+                    padding-right: 0;
                     border-right: none;
                 }
 
@@ -328,11 +339,11 @@
     }
 
     .works-list {
-        margin: -1rem;
+        margin: -1.7rem -1rem 1.2rem;
 
         .works-item-holder {
             position: relative;
-            margin: 0.5rem;
+            margin: 1rem;
 
             .works-img {
                 width: 100%;
@@ -373,7 +384,16 @@
 .testimonials {
     @include block-style(black);
 
+    .colour-line {
+        margin-bottom: 6.8rem;
+    }
+
+    .slick-slider-testimonials {
+        margin-bottom: 2.2rem;
+    }
+
     .testimonials-text {
+        padding: 0 5rem;
         margin-bottom: 2rem;
         font-size: 1.125rem;
         color: #e7e7e7;
@@ -400,7 +420,7 @@
 .contact {
     @include block-style(white);
 
-    .contact-forms {
-        padding: 0 $padding-hor;
+    .colour-line {
+        margin-bottom: 3.15rem;
     }
 }

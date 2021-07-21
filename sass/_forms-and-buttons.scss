@@ -126,30 +126,36 @@
 .contact-forms {
     @include flex(wrap, null, space-between, stretch);
 
+    padding: 0 12rem;
+    margin-bottom: 2.7rem;
+
     span {
         color: red;
     }
 
     .form-input {
         width: 48%;
-        padding-top: $padding-ver;
-        margin-bottom: 1rem;
+        margin: 5.5rem 0 1rem;
         text-align: left;
 
         input {
             @include transition(box-shadow);
+
+            height: 2rem;
+            padding: 1.25rem 1rem;
+            margin-top: 2px;
         }
     }
 
     .form-textarea {
         width: 100%;
-        padding: 2rem 0;
+        padding: 0.7rem 0;
         text-align: left;
 
         textarea {
             @include transition(box-shadow);
 
-            height: 10rem;
+            height: 10.5rem;
         }
     }
 
@@ -162,8 +168,9 @@
     }
 
     .contact-button {
-        width: 25%;
-        line-height: 3em;
+        width: 22.5%;
+        margin-top: 1.4rem;
+        line-height: 2rem;
         color: #fff;
         text-align: center;
         vertical-align: middle;

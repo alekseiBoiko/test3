@@ -3,6 +3,7 @@ body {
     font-family: 'Open Sans', 'arial', sans-serif;
     font-size: 16px;
     color: $gray;
+    -webkit-font-smoothing: antialiased;
 }
 
 i {
@@ -75,6 +76,7 @@ button {
     position: relative;
     width: 6rem;
     height: 0.25rem;
+    margin: 0.75rem auto;
     background-color: $orange;
 
     &::after {
