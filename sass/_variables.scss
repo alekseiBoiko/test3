@@ -3,6 +3,7 @@ $padding-ver: 4%;
 $padding: $padding-ver $padding-hor; 
 $orange: #fcac45;
 $gray: #6c6c6c;
+$dtColor: #5a5a5a;
 
 @mixin flex($wrap: unset, $direction: normal, $justify: normal, $align: normal) {
 	display: flex;
