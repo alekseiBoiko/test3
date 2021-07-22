@@ -121,17 +121,6 @@
                     border-radius: 50%;
                     box-shadow: 0 0 0 2px $dtColor;
                 }
-
-                // &::after {
-                //     position: absolute;
-                //     top: 47%;
-                //     left: 30%;
-                //     width: 1em;
-                //     height: 1em;
-                //     content: " ";
-                //     border: solid black 1px;
-                //     border-radius: 50%;
-                // }
             }
 
             .about-list-definition {
@@ -247,13 +236,9 @@
                 border-radius: 50%;
             }
 
-            &:hover {
-                box-shadow: 0 0 0 4px $gray;
-
-                .services-icon {
-                    background-color: $orange;
-                    border-color: $gray;
-                }
+            &:hover .services-icon {
+                background-color: $orange;
+                border-color: $gray;
             }
 
             .services-items-tittle {

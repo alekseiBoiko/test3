@@ -13,8 +13,13 @@
         width: 33%;
     }
 
-    .services-items {
-        width: 45%;
+    .services .services-list {
+        margin-top: 2rem;
+
+        .services-items {
+            width: 48%;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -23,27 +28,33 @@
         font-size: 14px;
     }
 
-    .nav {
-        @include flex(unset,column,space-between, flex-start);
+    .header {
+        .nav {
+            @include flex(unset,column,space-between, flex-start);
 
-        position: absolute;
-        top: 5rem;
-        right: -30%;
-        width: 15%;
-        min-width: 120px;
-        padding-left: 1rem;
-        background-color: black;
-        opacity: 0;
-        transition: right 1s;
+            position: absolute;
+            top: 6rem;
+            right: -30%;
+            width: 25%;
+            min-width: 120px;
+            padding-left: 1rem;
+            background-color: black;
+            opacity: 0;
+            transition: right 1s;
 
-        .nav-item {
-            text-align: left;
+            .nav-item {
+                text-align: left;
+
+                &::after {
+                    top: 2rem;
+                }
+            }
         }
-    }
 
-    .nav_active {
-        right: 0;
-        opacity: 1;
+        .nav_active {
+            right: 0;
+            opacity: 1;
+        }
     }
 
     .menu-btn {
@@ -52,6 +63,10 @@
 
     .about {
         align-items: center;
+    }
+
+    .contact-forms {
+        padding: 0 $padding-hor;
     }
 }
 
@@ -64,24 +79,27 @@
         }
     }
 
-    .works-filter {
-        flex-wrap: wrap;
-
-        .filter-type {
-            width: 100%;
-            text-align: center;
-        }
-
-        .filter-list {
+    .works {
+        .works-filter {
             flex-wrap: wrap;
 
-            .filter-item {
-                width: 50%;
+            .filter-type {
+                width: 100%;
                 margin-bottom: 1rem;
                 text-align: center;
+            }
 
-                &:nth-child(2) {
-                    border-right: none;
+            .filter-list {
+                flex-wrap: wrap;
+
+                .filter-item {
+                    width: 50%;
+                    margin-bottom: 1rem;
+                    text-align: center;
+
+                    &:nth-child(2) {
+                        border-right: none;
+                    }
                 }
             }
         }
@@ -100,7 +118,7 @@
         font-size: 12px;
     }
 
-    .services-list {
+    .services .services-list {
         flex-wrap: wrap;
 
         .services-items {
@@ -116,8 +134,9 @@
         }
     }
 
-    .form-input {
+    .contact-forms .form-input {
         flex-basis: 100%;
+        margin-top: 1rem;
     }
 
     #footer {
